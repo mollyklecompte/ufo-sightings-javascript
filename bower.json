@@ -1,5 +1,5 @@
 {
-  "name": "NAME HERE",
+  "name": "ufo-sightings",
   "description": "",
   "main": "index.js",
   "license": "ISC",
@@ -15,5 +15,8 @@
     "jquery": "^3.1.1",
     "bootstrap": "^3.3.7",
     "moment": "^2.15.1"
-  }
+  },
+  "authors": [
+    "Molly LeCompte <mollylc92@hotmail.com>"
+  ]
 }
