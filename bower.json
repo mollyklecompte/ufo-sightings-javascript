@@ -3,7 +3,7 @@
   "description": "",
   "main": "index.js",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/mollyklecompte/ufo-sightings-javascript",
   "ignore": [
     "**/.*",
     "node_modules",

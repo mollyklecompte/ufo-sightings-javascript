@@ -1,15 +1,14 @@
-var apiKey = require('./../.env').apiKey;
+var Sighting = require('./../js/boring_sighting.js').sightingModule;
 
 
 
-function addScript() {
-  var newScript = document.createElement("script");
-  newScript.src = "https://maps.googleapis.com/maps/api/js?key=" + apiKey + "&callback=initMap";
-
-  var placeholder = document.getElementById("placeholder");
-  document.body.insertBefore(newScript, placeholder);
-}
 
 $(document).ready(function() {
-  addScript();
+  var boringSighting = new Sighting();
+  boringSighting.addScript();
+
+  $('#weatherBoring').click(function() {
+    boringSighting.getWeather();
+  });
+
 });
