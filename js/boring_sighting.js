@@ -6,12 +6,13 @@ Sighting = function () {
 }
 
 Sighting.prototype.getWeather = function() {
-  $.get("http://api.openweathermap.org/data/2.5/weather?lat=45.412&lon=-122.361&appid=b1b15e88fa797225412429c1c50c122a1").then(function(response)
+  $.get("http://api.openweathermap.org/data/2.5/weather?lat=45.412&lon=-122.361&appid=" + apiKeyWeather).then(function(response)
   {
-    var tempFahrenheit = (response.main.temp*1.8)- 459.67;
-    $('.showWeather').text("The temperature in Boring is" + tempFahrenheit + " °F, with " + response.weather.description + ".");
+
+    var tempFahrenheit = Math.round((response.main.temp*1.8)- 459.67);
+    $('.showWeather').text("The temperature in Boring is " + tempFahrenheit + " °F, with " + response.weather.description + ".");
   }).fail(function(error) {
-    $(.'showWeather').text(error.responseJSON.message);
+    $('.showWeather').text(error.responseJSON.message);
   });
 }
 
